@@ -258,7 +258,7 @@ app.use((err, req, res, next) => {
 
     // res.send('Something Went Wrong!')
 })
-app.listen(3000, () => {
-    console.log("listening to port 3000")
+app.listen(80, () => {
+    console.log("listening to port 80")
 
 })
