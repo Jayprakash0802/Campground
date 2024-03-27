@@ -77,7 +77,7 @@ const sessionConfig={
     cookie:{
         httpOnly:true,
         // secure:true, //if we enable this then it will only accept https so if  we try to login to local host it will not work
-        expires:Date.now() + 7*24*60*60*1000//after 1week( since we don't want any user to be signed in for all time )
+        expires:Date.now() + 1*24*60*60*1000//after 1week( since we don't want any user to be signed in for all time )
     }
 }
 app.use(session(sessionConfig))
