@@ -12,7 +12,6 @@ const flash=require('connect-flash')
 const session=require('express-session')
 const Review = require('./models/review')
 const ExpressError = require('./utils/ExpressError');
-const passport=require('passport')
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const helmet=require('helmet');
@@ -126,14 +125,6 @@ app.use(
     })
 );
 
-
-//use passport
-app.use(passport.initialize());
-app.use(passport.session()); // this part should always come after app.use(session);
-passport.use(new LocalStrategy(User.authenticate()));
-
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
 
 //using flash
 app.use((req,res,next)=>{
