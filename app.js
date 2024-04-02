@@ -6,11 +6,8 @@ if (process.env.NODE_ENV !== "production") {
 const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose');
-//this is the styling part for yelpcamp
 const ejsMate = require('ejs-mate')
-// joi lets you describe your data using a simple, intuitive, and readable language.
 const methodoverride = require('method-override')
-// const { nextTick } = require('process');
 const flash=require('connect-flash')
 const session=require('express-session')
 const Review = require('./models/review')
